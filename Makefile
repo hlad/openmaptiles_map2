@@ -300,7 +300,7 @@ build-sprite: init-dirs
 
 .PHONY: build-style
 build-style: init-dirs
-	$(DOCKER_COMPOSE) run $(DC_OPTS) openmaptiles-tools bash -c 'style-tools recompose $(TILESET_FILE) $(STYLE_FILE) \
+	$(DOCKER_COMPOSE) run $(DC_OPTS) openmaptiles-tools bash -c 'style-tools merge $(TILESET_FILE) $(STYLE_FILE) \
 		$(STYLE_HEADER_FILE) && \
 		spreet /style/icons build/style/sprite && spreet --retina /style/icons build/style/sprite@2x'
 
