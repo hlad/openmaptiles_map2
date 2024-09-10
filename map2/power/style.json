@@ -1,0 +1,54 @@
+{
+  "layers": [
+    {
+      "id": "power_point",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "power",
+      "minzoom": 14,
+      "layout": {
+        "visibility": "visible",
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "power"
+          ],
+          "tower",
+          "power_tower",
+          "pole",
+          "power_tower_small",
+          "power_tower_small"
+        ]
+      },
+      "order": 240
+    },
+    {
+      "id": "power_line",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "power",
+      "minzoom": 14,
+      "layout": {
+        "line-cap": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#aa8888",
+        "line-width": [
+          "match",
+          [
+            "get",
+            "power"
+          ],
+          "minor_line",
+          1,
+          "line",
+          1.5,
+          1
+        ]
+      },
+      "order": 241
+    }
+  ]
+}

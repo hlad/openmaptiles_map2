@@ -1,0 +1,33 @@
+tables:
+
+  # etldoc: imposm3 -> osm_power_linestring
+  power_linestring:
+    columns:
+    - name: osm_id
+      type: id
+    - name: geometry
+      type: validated_geometry
+    - name: power
+      key: power
+      type: string
+    mapping:
+      power:
+      - line
+      - minor_line
+    type: linestring
+
+  # etldoc: imposm3 -> osm_power_point
+  power_point:
+    columns:
+    - name: osm_id
+      type: id
+    - name: geometry
+      type: validated_geometry
+    - name: power
+      key: power    
+      type: string
+    mapping:
+      power:
+      - pole
+      - tower
+    type: point
